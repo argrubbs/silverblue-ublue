@@ -11,7 +11,7 @@ RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfra
 
 
 RUN rpm-ostree override remove firefox firefox-langpacks && \
-    rpm-ostree install distrobox gnome-tweaks just tailscale && \
+    rpm-ostree install distrobox gnome-tweaks just tailscale asusctl supergfxctl && \
     sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-automatic.timer && \
