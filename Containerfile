@@ -16,4 +16,5 @@ RUN rpm-ostree override remove firefox firefox-langpacks && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-automatic.timer && \
     systemctl enable tailscaled.service && \
+    systemctl enable supergfxd.service && \
     ostree container commit
