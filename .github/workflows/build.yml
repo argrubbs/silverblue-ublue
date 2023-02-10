@@ -73,7 +73,7 @@ jobs:
             FEDORA_MAJOR_VERSION=${{ matrix.major_version }}
           oci: true
           extra-args:
-            runtime-flag=debug
+            --runtime-flag debug
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
