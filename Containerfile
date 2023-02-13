@@ -11,7 +11,7 @@ RUN wget https://copr.fedorainfracloud.org/coprs/calcastor/gnome-patched/repo/fe
 RUN rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:calcastor:gnome-patched mutter
 
 RUN rpm-ostree install distrobox gnome-tweaks just tailscale asusctl supergfxctl keepassxc gstreamer1-plugin-openh264 mozilla-openh264 && \
-    rpm-ostree install /tmp/microsft-edge-beta-110.0.1587.40-1.x86_64.rpm && \
+    rpm-ostree install /tmp/microsoft-edge-beta-110.0.1587.40-1.x86_64.rpm && \
     sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf && \
     systemctl enable rpm-ostreed-automatic.timer && \
     systemctl enable flatpak-automatic.timer && \
